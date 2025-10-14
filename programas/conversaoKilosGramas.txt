@@ -1,0 +1,40 @@
+namespace EstudoCSharp;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Apresentar();
+
+        decimal kilos = PedirValor("Informe quantos kilos: ");
+
+        decimal gramas = FazerConta(kilos);
+
+        FormularResposta(kilos, gramas);
+    }
+
+    static void Apresentar()
+    {
+        Console.WriteLine("===================================================");
+        Console.WriteLine("==  Programa da Conversão de Kilos para Gramas   ==");
+        Console.WriteLine("===================================================");
+    }
+
+    static decimal PedirValor(string msg)
+    {
+        Console.WriteLine(msg);
+        decimal valor = Convert.ToDecimal(Console.ReadLine());
+        return valor;
+    }
+
+    static decimal FazerConta(decimal kilos)
+    {
+        decimal gramas = kilos * 1000;
+        return gramas;
+    }
+
+    static void FormularResposta(decimal kilos, decimal gramas)
+    {
+        Console.WriteLine($"{kilos} kilos correspondem a {gramas} gramas");
+    }
+}

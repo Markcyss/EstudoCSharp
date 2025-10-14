@@ -1,0 +1,41 @@
+namespace EstudoCSharp;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Apresentar();
+
+        decimal valor = PedirValor("Informe o valor da sua compra: ");
+        decimal parcelas = PedirValor("Informe a quantidade de parcelas:");
+
+        decimal conta = FazerConta(valor, parcelas);
+
+        FormularResposta(valor, parcelas, conta);
+    }
+
+    static void Apresentar()
+    {
+        Console.WriteLine("=================================");
+        Console.WriteLine("==  Programa do Parcelamento   ==");
+        Console.WriteLine("=================================");
+    }
+
+    static decimal PedirValor(string msg)
+    {
+        Console.WriteLine(msg);
+        decimal valor = Convert.ToDecimal(Console.ReadLine());
+        return valor;
+    }
+
+    static decimal FazerConta(decimal valor, decimal parcelas)
+    {
+        decimal conta = valor / parcelas;
+        return conta;
+    }
+
+    static void FormularResposta(decimal valor, decimal parcelas, decimal conta)
+    {
+        Console.WriteLine($"Sua compra de R$ {valor} dividida em {parcelas}x de R$ {conta} foi concluída");
+    }
+}
