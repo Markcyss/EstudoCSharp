@@ -1,0 +1,43 @@
+namespace EstudoCSharp;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Apresentar();
+
+        decimal tanque = PedirValor("Informe a quantidade máxima do tanque: ");
+        decimal consumo = PedirValor("Informe o consumo do veículo por km rodado:");
+        decimal distancia = PedirValor("Informe a distância da Viagem:");
+
+        int conta = FazerConta(tanque, consumo, distancia);
+
+        FormularResposta(conta);
+    }
+
+    static void Apresentar()
+    {
+        Console.WriteLine("===========================");
+        Console.WriteLine("==  Programa da Viagem   ==");
+        Console.WriteLine("===========================");
+    }
+
+    static decimal PedirValor(string msg)
+    {
+        Console.WriteLine(msg);
+        decimal valor = Convert.ToDecimal(Console.ReadLine());
+        return valor;
+    }
+
+    static int FazerConta(decimal tanque, decimal consumo, decimal distancia)
+    {
+        decimal result = distancia / (tanque * consumo);
+        int conta = (int)result + 1;
+        return conta;
+    }
+
+    static void FormularResposta(int conta)
+    {
+        Console.WriteLine($"Você precisará fazer {conta} paradas para abastecer.");
+    }
+}

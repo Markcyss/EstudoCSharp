@@ -12,3 +12,4 @@ C:\Users\marso\Desktop\Estudo\Frei\Prof Bruno\4°Bim\EstudoCSharp\obj\Debug\net9
 C:\Users\marso\Desktop\Estudo\Frei\Prof Bruno\4°Bim\EstudoCSharp\obj\Debug\net9.0\EstudoCSharp.pdb
 C:\Users\marso\Desktop\Estudo\Frei\Prof Bruno\4°Bim\EstudoCSharp\obj\Debug\net9.0\EstudoCSharp.genruntimeconfig.cache
 C:\Users\marso\Desktop\Estudo\Frei\Prof Bruno\4°Bim\EstudoCSharp\obj\Debug\net9.0\ref\EstudoCSharp.dll
+C:\Users\marso\Desktop\Estudo\Frei\Prof Bruno\4°Bim\EstudoCSharp\obj\Debug\net9.0\EstudoCSharp.sourcelink.json

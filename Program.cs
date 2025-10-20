@@ -6,36 +6,35 @@ class Program
     {
         Apresentar();
 
-        decimal valor = PedirValor("Informe o valor da sua compra: ");
-        decimal parcelas = PedirValor("Informe a quantidade de parcelas:");
+        decimal qtd = PedirValor("Informe a quantidade de Açaís que deseja (cada um custa R$13,50):");
 
-        decimal conta = FazerConta(valor, parcelas);
+        decimal conta = FazerConta(qtd);
 
-        FormularResposta(valor, parcelas, conta);
+        FormularResposta(conta);
     }
 
     static void Apresentar()
     {
-        Console.WriteLine("=================================");
-        Console.WriteLine("==  Programa do Parcelamento   ==");
-        Console.WriteLine("=================================");
+        Console.WriteLine("===========================");
+        Console.WriteLine("==   Programa do Açaí    ==");
+        Console.WriteLine("===========================");
     }
 
     static decimal PedirValor(string msg)
     {
         Console.WriteLine(msg);
-        decimal valor = Convert.ToDecimal(Console.ReadLine());
+        int valor = Convert.ToInt32(Console.ReadLine());
         return valor;
     }
 
-    static decimal FazerConta(decimal valor, decimal parcelas)
+    static decimal FazerConta(decimal qtd)
     {
-        decimal conta = valor / parcelas;
+        decimal conta = 13.50m * qtd;
         return conta;
     }
 
-    static void FormularResposta(decimal valor, decimal parcelas, decimal conta)
+    static void FormularResposta(decimal conta)
     {
-        Console.WriteLine($"Sua compra de R$ {valor} dividida em {parcelas}x de R$ {conta} foi concluída");
+        Console.WriteLine($"Você precisará fazer {conta} paradas para abastecer.");
     }
 }
