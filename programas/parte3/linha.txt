@@ -1,0 +1,37 @@
+namespace EstudoCSharp;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Apresentar();
+
+        int qtd = PedirValor("Diga a quantidade de pontos:");
+
+        EscreverNaTela(qtd);
+    }
+
+    public static void Apresentar()
+    {
+        Console.WriteLine("=========================");
+        Console.WriteLine("==  Programa da Linha  ==");
+        Console.WriteLine("=========================");
+    }
+
+    public static int PedirValor(string msg)
+    {
+        Console.WriteLine(msg);
+        int valor = Convert.ToInt32(Console.ReadLine());
+        return valor;
+    }
+    
+    public static void EscreverNaTela(int qtd)
+    {
+        int i = 1;
+        while (i <= qtd)
+        {
+            Console.Write("* ");
+            i++;
+        }
+    }
+}

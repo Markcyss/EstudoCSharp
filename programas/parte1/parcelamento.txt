@@ -14,27 +14,27 @@ class Program
         FormularResposta(valor, parcelas, conta);
     }
 
-    static void Apresentar()
+    public static void Apresentar()
     {
         Console.WriteLine("=================================");
         Console.WriteLine("==  Programa do Parcelamento   ==");
         Console.WriteLine("=================================");
     }
 
-    static decimal PedirValor(string msg)
+    public static decimal PedirValor(string msg)
     {
         Console.WriteLine(msg);
         decimal valor = Convert.ToDecimal(Console.ReadLine());
         return valor;
     }
 
-    static decimal FazerConta(decimal valor, decimal parcelas)
+    public static decimal FazerConta(decimal valor, decimal parcelas)
     {
         decimal conta = valor / parcelas;
         return conta;
     }
 
-    static void FormularResposta(decimal valor, decimal parcelas, decimal conta)
+    public static void FormularResposta(decimal valor, decimal parcelas, decimal conta)
     {
         Console.WriteLine($"Sua compra de R$ {valor} dividida em {parcelas}x de R$ {conta} foi concluída");
     }

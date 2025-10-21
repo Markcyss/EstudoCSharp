@@ -1,0 +1,38 @@
+namespace EstudoCSharp;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Apresentar();
+
+        string txt = PedirValor("Diga o texto para soletrar:");
+
+        EscreverNaTela(txt);
+    }
+
+    public static void Apresentar()
+    {
+        Console.WriteLine("==============================");
+        Console.WriteLine("==  Programa do Soletrando  ==");
+        Console.WriteLine("==============================");
+    }
+
+    public static string PedirValor(string msg)
+    {
+        Console.WriteLine(msg);
+        string valor = Console.ReadLine();
+        return valor;
+    }
+    
+    public static void EscreverNaTela(string txt)
+    {
+        int i = 0;
+        int qtd = txt.Length;
+        while (i < qtd)
+        {
+            Console.WriteLine(txt[i]);
+            i++;
+        }
+    }
+}

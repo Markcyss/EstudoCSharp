@@ -15,28 +15,28 @@ class Program
         FormularResposta(conta);
     }
 
-    static void Apresentar()
+    public static void Apresentar()
     {
         Console.WriteLine("===========================");
         Console.WriteLine("==  Programa da Viagem   ==");
         Console.WriteLine("===========================");
     }
 
-    static decimal PedirValor(string msg)
+    public static decimal PedirValor(string msg)
     {
         Console.WriteLine(msg);
         decimal valor = Convert.ToDecimal(Console.ReadLine());
         return valor;
     }
 
-    static int FazerConta(decimal tanque, decimal consumo, decimal distancia)
+    public static int FazerConta(decimal tanque, decimal consumo, decimal distancia)
     {
         decimal result = distancia / (tanque * consumo);
         int conta = (int)result + 1;
         return conta;
     }
 
-    static void FormularResposta(int conta)
+    public static void FormularResposta(int conta)
     {
         Console.WriteLine($"Você precisará fazer {conta} paradas para abastecer.");
     }

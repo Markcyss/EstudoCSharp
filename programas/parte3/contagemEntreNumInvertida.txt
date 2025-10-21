@@ -1,0 +1,38 @@
+namespace EstudoCSharp;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Apresentar();
+
+        int num1 = PedirValor("Diga o número que inicia a contagem reversa:");
+        int num2 = PedirValor("Diga o número que finaliza a contagem:");
+
+        EscreverNaTela(num1, num2);
+    }
+
+    public static void Apresentar()
+    {
+        Console.WriteLine("===================================================================");
+        Console.WriteLine("==  Programa da Contagem com Inicio e Fim escolhidos invertidos  ==");
+        Console.WriteLine("===================================================================");
+    }
+
+    public static int PedirValor(string msg)
+    {
+        Console.WriteLine(msg);
+        int valor = Convert.ToInt32(Console.ReadLine());
+        return valor;
+    }
+    
+    public static void EscreverNaTela(int num1, int num2)
+    {
+        int i = num1;
+        while (i >= num2)
+        {
+            Console.WriteLine(i);
+            i--;
+        }
+    }
+}

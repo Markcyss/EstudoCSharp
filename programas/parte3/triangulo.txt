@@ -1,4 +1,4 @@
-﻿namespace EstudoCSharp;
+namespace EstudoCSharp;
 
 class Program
 {
@@ -13,9 +13,9 @@ class Program
 
     public static void Apresentar()
     {
-        Console.WriteLine("=======================================");
-        Console.WriteLine("==  Programa do Triângulo Invertido  ==");
-        Console.WriteLine("=======================================");
+        Console.WriteLine("=============================");
+        Console.WriteLine("==  Programa do Triângulo  ==");
+        Console.WriteLine("=============================");
     }
 
     public static int PedirValor(string msg)
@@ -31,14 +31,8 @@ class Program
         while (i <= qtd)
         {
             int j = 1;
-            int k = 1;
             while (j <= i)
             {
-                while (k <= qtd - i)
-                {
-                    Console.Write("  ");
-                    k++;
-                }
                 Console.Write("* ");
                 j++;
             }

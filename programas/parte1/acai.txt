@@ -1,0 +1,40 @@
+namespace EstudoCSharp;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Apresentar();
+
+        int qtd = PedirValor("Informe a quantidade de Açaís que deseja (cada um custa R$13,50):");
+
+        decimal conta = FazerConta(qtd);
+
+        FormularResposta(conta);
+    }
+
+    public static void Apresentar()
+    {
+        Console.WriteLine("===========================");
+        Console.WriteLine("==   Programa do Açaí    ==");
+        Console.WriteLine("===========================");
+    }
+
+    public static int PedirValor(string msg)
+    {
+        Console.WriteLine(msg);
+        int valor = Convert.ToInt32(Console.ReadLine());
+        return valor;
+    }
+
+    public static decimal FazerConta(int qtd)
+    {
+        decimal conta = 13.50m * qtd;
+        return conta;
+    }
+
+    public static void FormularResposta(decimal conta)
+    {
+        Console.WriteLine($"O total a pagar é de R$ {conta}");
+    }
+}

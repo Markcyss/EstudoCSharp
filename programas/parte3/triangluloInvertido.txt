@@ -1,4 +1,4 @@
-﻿namespace EstudoCSharp;
+namespace EstudoCSharp;
 
 class Program
 {

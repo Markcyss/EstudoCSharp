@@ -13,27 +13,27 @@ class Program
         FormularResposta(valor, convert);
     }
 
-    static void Apresentar()
+    public static void Apresentar()
     {
         Console.WriteLine("====================================================");
         Console.WriteLine("==  Programa da Conversão de Reais para Dólares   ==");
         Console.WriteLine("====================================================");
     }
 
-    static decimal PedirValor(string msg)
+    public static decimal PedirValor(string msg)
     {
         Console.WriteLine(msg);
         decimal valor = Convert.ToDecimal(Console.ReadLine());
         return valor;
     }
 
-    static decimal FazerConversao(decimal valor)
+    public static decimal FazerConversao(decimal valor)
     {
         decimal convert = valor / 5.16m;
         return convert;
     }
 
-    static void FormularResposta(decimal valor, decimal convert)
+    public static void FormularResposta(decimal valor, decimal convert)
     {
         Console.WriteLine($"R$ {valor} correspondem a $ {convert.ToString("0.00")}");
     }

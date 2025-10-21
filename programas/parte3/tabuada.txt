@@ -1,0 +1,39 @@
+namespace EstudoCSharp;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Apresentar();
+
+        int num = PedirValor("Diga a tabuada que deseja ver:");
+
+        EscreverNaTela(num);
+    }
+
+    public static void Apresentar()
+    {
+        Console.WriteLine("===========================");
+        Console.WriteLine("==  Programa da Tabuada  ==");
+        Console.WriteLine("===========================");
+    }
+
+    public static int PedirValor(string msg)
+    {
+        Console.WriteLine(msg);
+        int valor = Convert.ToInt32(Console.ReadLine());
+        return valor;
+    }
+    
+    public static void EscreverNaTela(int num)
+    {
+        int i = 1;
+        int mult = 0;
+        while (i <= 10)
+        {
+            mult = num * i;
+            Console.WriteLine($"{num} x {i} = {mult}");
+            i++;
+        }
+    }
+}

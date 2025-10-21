@@ -1,0 +1,59 @@
+namespace EstudoCSharp;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Apresentar();
+
+        int qtdP = PedirValor("Informe a quantidade de Açaís pequenos deseja (cada um custa R$13,50):");
+        int qtdM = PedirValor("Informe a quantidade de Açaís médios deseja (cada um custa R$15,00):");
+        int qtdG = PedirValor("Informe a quantidade de Açaís grandes deseja (cada um custa R$17,50):");
+        decimal cupom = PedirValor("Informe a porcentagem do Cupom de Desconto:");
+
+        decimal valP = 13.50m;
+        decimal valM = 15.00m;
+        decimal valG = 17.50m;
+
+        decimal contaP = FazerConta(qtdP, valP);
+        decimal contaM = FazerConta(qtdM, valM);
+        decimal contaG = FazerConta(qtdG, valG);
+
+        decimal total = FazerContaTotal(contaP, contaM, contaG, cupom);
+
+        FormularResposta(total);
+    }
+
+    public static void Apresentar()
+    {
+        Console.WriteLine("===========================");
+        Console.WriteLine("==   Programa do Açaí    ==");
+        Console.WriteLine("===========================");
+    }
+
+    public static int PedirValor(string msg)
+    {
+        Console.WriteLine(msg);
+        int valor = Convert.ToInt32(Console.ReadLine());
+        return valor;
+    }
+
+    public static decimal FazerConta(int qtd, decimal valor)
+    {
+        decimal conta = valor * qtd;
+        return conta;
+    }
+
+    public static decimal FazerContaTotal(decimal vl1, decimal vl2, decimal vl3, decimal cupom)
+    {
+        decimal soma = vl1 + vl2 + vl3;
+        decimal cupomdec = cupom / 100;
+        decimal total = soma - (soma * cupomdec);
+        return total;
+    }
+
+    public static void FormularResposta(decimal conta)
+    {
+        Console.WriteLine($"O total a pagar é de R$ {conta.ToString("0.00")}");
+    }
+}
